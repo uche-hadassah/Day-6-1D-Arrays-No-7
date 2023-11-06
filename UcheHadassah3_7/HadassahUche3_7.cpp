@@ -24,11 +24,12 @@ Output (all prime numbers between 1 and 500):
 using namespace std;
 int main()
 {
-	int Array[500] = { 1 };//Initializing all the elements in the array to 1
-	for (int i = 2; i <= 500; i++)
+	const int MAX = 500;
+	int Array[MAX] = { 1 };//Initializing all the elements in the array to 1
+	for (int i = 2; i <= MAX; i++)
 	{
 		int j = i;
-		while (Array[i] == 1 && j <= 500)
+		while (Array[i] == 1 && j <= MAX)
 		{
 			if (j +1 % i == 0)
 			{
@@ -42,7 +43,7 @@ int main()
 		}
 	}
 	cout << "Output all prime numbers between 1 and 500:" << endl;
-	for (int k = 2; k <= 500; k++)
+	for (int k = 2; k <= MAX; k++)
 	{
 		while (Array[k] == 1)
 		{
