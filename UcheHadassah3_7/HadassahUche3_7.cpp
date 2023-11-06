@@ -5,30 +5,42 @@ using namespace std;
 int main()
 {
 	const int MAX = 500;
-	int Array[MAX] = { 1 };//Initializing all the elements in the array to 1
+	int array[MAX];
+	for (int a = 0; a < MAX; a++)
+	{
+		array[a] = 1;
+	}
 	for (int i = 2; i <= MAX; i++)
 	{
 		int j = i;
-		while (Array[i] == 1 && j <= MAX)
+		while(j <= MAX)
 		{
-			if (j +1 % i == 0)
+			if (array[i] == 1)
 			{
-				Array[j + 1] = 0;
+				if (j + 1 % i == 0)
+				{
+					array[j + 1] = 0;
+				}
+				else
+				{
+					array[j + 1] == 1;
+				}
+				j++;
 			}
 			else
 			{
-				Array[j + 1] == 1;
+				break;
 			}
-			j++;
 		}
 	}
 	cout << "Output all prime numbers between 1 and 500:" << endl;
 	for (int k = 2; k <= MAX; k++)
 	{
-		while (Array[k] == 1)
+		if (array[k] == 1)
 		{
-			cout << k << " ";
+			cout << array[k]<< " ";
 		}
 	}
+
 	return 0;
 }
