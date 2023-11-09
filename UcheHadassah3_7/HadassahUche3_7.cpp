@@ -39,14 +39,9 @@ int main()
 		else if ((j + 1) % j != 0 && array[j] != false)
 		{
 			array[j] = true;
+			break;
 		}
+		cout << array[j] << " ";
 	}
-	cout << "Output all prime numbers between 1 to 500"<<endl;
-	for (int k = 0; k < MAX; k++)
-	{
-		if(array[k] = true)
-		{
-			cout << k << " ";
-		}
-	}
+	
 }
