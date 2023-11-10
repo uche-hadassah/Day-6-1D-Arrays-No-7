@@ -36,7 +36,7 @@ int main()
 		{
 			array[j] = false;
 		}
-		else if ((j + 1) % j != 0 && array[j] != false)
+		else if ((j + 1) % j != 0 && array[j] != false)//Need to check this later
 		{
 			array[j] = true;
 			break;
