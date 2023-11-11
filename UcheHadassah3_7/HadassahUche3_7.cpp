@@ -30,13 +30,13 @@ int main()
 	{
 		array[i] = true;
 	}
-	for (int j = 2; j < MAX; j++)
+	for (int j = 2; j < MAX; j++)//Starts checking from index 2
 	{
-		if ((j + 1) % j == 0)
+		if ((j + 1) % j == 0)//
 		{
 			array[j] = false;
 		}
-		else if ((j + 1) % j != 0 && array[j] != false)//Need to check this later
+		else if ((j + 1) % j != 0 || array[j] != false)//Need to check this later
 		{
 			array[j] = true;
 			break;
