@@ -32,16 +32,20 @@ int main()
 	}
 	for (int j = 2; j < MAX; j++)//Starts checking from index 2
 	{
-		if ((j + 1) % j == 0)//
+		int val = j;
+		while ((val+j) % j == 0 && val+j < MAX)
 		{
-			array[j] = false;
+			array[val+j] = false;//Sets the value of the array to 0
+			val += j;
 		}
-		else if ((j + 1) % j != 0 || array[j] != false)//Need to check this later
+	}
+	cout << "The prime numbers are:" << endl;
+	for (int k = 2; k < MAX; k++)
+	{
+		if(array[k] == true)
 		{
-			array[j] = true;
-			break;
+			cout << k << " ";
 		}
-		cout << array[j] << " ";
 	}
 	
 }
